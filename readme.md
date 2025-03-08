@@ -44,7 +44,7 @@ The pcb fits exactly in a C64C-case:
     You have to select PAL or NTSC for composite/YC with the jumpers JP16-18.
     The 8MHz oscillator must a 3.3V type for the SD2IEC!
 
-![LC256 pcb](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_pcb.jpg)
+![LC256 pcb](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v11_pcb.jpg)
 
 **jumpers for 65c02, CPLD, V9958, 1MB RAM, no 555, 3.3V osc's:**
 
@@ -68,7 +68,7 @@ The pcb fits exactly in a C64C-case:
     JP20 (FIRQ(6309) Ext.2): open
     JP21 (521KB): 2-3
     
-![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_pcb_back.jpg)
+![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v11_pcb_back.jpg)
 
 **assembling hints:**
 
@@ -82,8 +82,8 @@ The pcb fits exactly in a C64C-case:
     With V9938 you have to bridge the 100nF caps C8,C9,C12.
     You have to solder the YC-board on the pinheaders to get the correct height for the case!
 
-Looks nice in a clear C64C-case (pcb-LEDs visible:
+Looks nice in a clear C64C-case (pcb-LEDs visible):
 ![LC256 case2](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_case2.jpg)
 
 First prototype:
-![LC256 prototype](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_first-prototype-v1.0.jpg)
+![LC256 prototype](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_first-prototype-v1.0.png)
