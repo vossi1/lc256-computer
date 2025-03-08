@@ -7,6 +7,8 @@
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
 International License. See [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).
 
+![LC256 start screen](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_title.jpg)
+
 **description:**
 
     A 4MHz 65c02 computer with the Yamaha V9958 (V9938)
