@@ -88,6 +88,9 @@ The pcb fits exactly in a C64C-case:
     With V9938 you have to bridge the 100nF caps C8,C9,C12.
     You have to solder the YC-board on the pinheaders to get the correct height for the case!
 
+OPL3-DAC-soundcard:
+![OPL3-DAC photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256-opl3-dac_soundcard_v10.jpg)
+
 Looks nice in a clear C64C-case (pcb-LEDs visible):
 ![LC256 case2](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_case2.jpg)
 
