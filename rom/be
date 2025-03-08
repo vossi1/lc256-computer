@@ -1,0 +1,5 @@
+#!/bin/sh
+acme -Wtype-mismatch -v lc256_basic4.b
+acme -Wtype-mismatch -v lc256.b
+cat basic.bin kernal.bin > rom.bin
+minipro -p at27c256r@dip28 -w rom.bin

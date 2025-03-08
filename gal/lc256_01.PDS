@@ -1,0 +1,55 @@
+TITLE		LC256 MMU
+PATTERN		MMU, Address Decoder
+REVISION	0.1
+AUTHOR		Vossi
+COMPANY		Vossi Development
+DATE		28.8.2024
+
+; 
+
+CHIP XXX PAL26V12	; Device definition
+
+; / NOT	  * AND   + OR,   = Combinational output,   := Registered output
+
+;1]    [2]    [3]    [4]    [5]    [6]    [7]
+PHI2   RW    ROML   ROMH   A7     A8     VCC
+
+;8]    [9]    [10]   [11]   [12]   [13]   [14]
+A9     A10    A11    A12    A13    A14    A15
+
+;15]   [16]   [17]   [18]   [19]   [20]   [21]
+_RAM0  _RAM1  _ROM   _IO    _CART  _CSR   GND
+
+;22]   [23]   [24]   [25]   [26]   [27]   [28]
+_CSW   _RDUSB WRUSB  _KB0   _BE    _EXTL  _EXTH
+
+EQUATIONS
+
+/_KB0	= /A15 * /A14 * /A13 * /A12 * /A11 * /A10		; $0 - $3FF always in RAM Bank %00
+
+; BE low -> DMA access - only RAM selected!
+; BE high -> all other CS outputs active
+
+/_IO	= /_BE * A15 *  A14 * /A13 *  A12 *  A11 *  A10		; I/O = DC00-DFFF (external limited to DE00-DFFF)
+
+
+/_CART	= /_BE * A15 * /A14 * /_EXTL * RW			; cartridge low 8000-BFFF read only
+	+ /_BE * A15 *  A14 * /_EXTH * _IO * RW			; cartridge high C000-FFFF read only (except IO)
+
+/_ROM	= /_BE * A15 * /A14 * ROML * _CART * RW			; basic ROM 8000-BFFF read only 
+	+ /_BE * A15 *  A14 *  A13 * ROMH * _CART * RW		; kernal ROM E000-FFFF read only
+	+ /_BE * A15 *  A14 * /A13 * /A12 * ROMH * _CART * RW	; kernal extensions ROM C000-CFFF read only
+
+/_RAM0	= /_BE * /A15 * PHI2					; RAM 0000-7FFF
+	+  _BE * /A15						; DMA active -> only RAM access with external clock
+
+/_RAM1	= /_BE *  A15 * PHI2 * _IO * _CART * _ROM		; RAM 8000-FFFF
+	+  _BE *  A15						; DMA active -> only RAM access with external clock
+
+/_CSW	= /_BE * PHI2 * /_IO * /A9 * /A8 * /A7 * /RW		; VDP write DC00-DC7F
+
+/_CSR	= /_BE * PHI2 * /_IO * /A9 * /A8 *  A7 *  RW		; VDP read DC80-DCFF
+
+WRUSB	= /_BE * PHI2 * /_IO * /A9 *  A8 * /A7 * /RW		; USB write DD00-DD7F
+
+/_RDUSB	= /_BE * PHI2 * /_IO * /A9 *  A8 * /A7 *  RW		; USB read DD00-DD7F

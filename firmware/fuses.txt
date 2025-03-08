@@ -1,0 +1,5 @@
+Shadowwolf2 Firmware LC256 SD2IEC 1.2a:
+isp
+
+Ext. 8MHz Clock:
+avrdude -p m644p -c avrispmkii -U lfuse:w:0xe0:m -U hfuse:w:0xda:m -U efuse:w:0xfd:m

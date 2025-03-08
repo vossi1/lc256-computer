@@ -1,0 +1,24 @@
+Partlist
+
+Exported from lc256_63c09.sch at 08.03.25 07:13
+
+EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value          Device         Package        Library  Sheet
+
+C1       100n           C_CERAMIC_0805 0805           _smd     1
+C2       100n           C_CERAMIC_0805 0805           _smd     1
+C3       4,7u           C_CERAMIC_0805 0805           _smd     1
+IC1      HD63C09ECP     HD63C09E       PLCC44         _smd     1
+IC2      74HCT73D       74HCT73D       SO14           _smd     1
+J1       cpu1           PINHEAD10127M  PINHEAD10_127M _smd     1
+J2       cpu2           PINHEAD10127M  PINHEAD10_127M _smd     1
+J3       cpu3           PINHEAD10127M  PINHEAD10_127M _smd     1
+J4       cpu4           PINHEAD10127M  PINHEAD10_127M _smd     1
+JP1      AVMA           PAD-1-2        PAD-1-2        _smd     1
+JP2      BA             PAD-1-2        PAD-1-2        _smd     1
+JP3      BS             PAD-1-2        PAD-1-2        _smd     1
+JP4      TSC            PAD-1-2        PAD-1-2        _smd     1
+R1       4,7k           RESISTOR_0805  0805           _smd     1

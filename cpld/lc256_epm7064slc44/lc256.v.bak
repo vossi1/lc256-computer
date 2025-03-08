@@ -1,0 +1,11 @@
+module led_blink( input CLOCK,
+ output LED_0;
+// Zaehler, um 50 MHz zu teilen
+reg [19:0] clk_counter;
+// LED ueber das MSB des Zaehlers steuern
+assign LED_0 = clk_counter[19];
+// Bei jedem Takt
+always @(posedge CLOCK) begin
+        clk_counter <= clk_counter + 1;  // Zaehler erhoehen
+end
+endmodule

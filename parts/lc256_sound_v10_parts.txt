@@ -1,0 +1,92 @@
+Partlist
+
+Exported from lc256_sound.sch at 08.03.25 07:13
+
+EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value             Device            Package          Library  Sheet
+
+C1       100n              C_CERAMIC_0805    0805             _smd     1
+C2       10u               C_CERAMIC_0805    0805             _smd     1
+C3       68p               C_CERAMIC_0805    0805             _smd     1
+C4       2,7n              C_CERAMIC_0805    0805             _smd     1
+C5       2,7n              C_CERAMIC_0805    0805             _smd     1
+C6       10u               C_CERAMIC_0805    0805             _smd     1
+C7       100n              C_CERAMIC_0805    0805             _smd     1
+C9       10u               C_CERAMIC_0805    0805             _smd     1
+C10      100n              C_CERAMIC_0805    0805             _smd     1
+C12      100n              C_CERAMIC_0805    0805             _smd     1
+C13      10u               C_CERAMIC_0805    0805             _smd     1
+C14      100n              C_CERAMIC_0805    0805             _smd     1
+C15      100n              C_CERAMIC_0805    0805             _smd     1
+C16      100n              C_CERAMIC_0805    0805             _smd     1
+C17      330p              C_CERAMIC_0805    0805             _smd     1
+C18      2,2n              C_CERAMIC_0805    0805             _smd     1
+C19      4,7u              C_CERAMIC_0805    0805             _smd     1
+C20      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C21      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C22      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C23      4,7n              C_CERAMIC_0805    0805             _smd     1
+C24      4,7n              C_CERAMIC_0805    0805             _smd     1
+C25      1n                C_CERAMIC_0805    0805             _smd     1
+C26      1n                C_CERAMIC_0805    0805             _smd     1
+C27      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C28      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C29      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C30      100n              C_CERAMIC_0805    0805             _smd     1
+C32      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C33      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C34      1u C0G            C_CERAMIC_0805    0805             _smd     1
+C35      1n                C_CERAMIC_0805    0805             _smd     1
+C36      1n                C_CERAMIC_0805    0805             _smd     1
+C37      4,7u              C_CERAMIC_0805    0805             _smd     1
+C38      10u               C_CERAMIC_0805    0805             _smd     1
+C39      1u C0G            C_CERAMIC_0805    0805             _smd     1
+DC1      NME1S0505         DCDC-NME1         _NME             _smd     1
+IC1      YMF262-M          YMF262-M          SO24-330         _smd     1
+IC2      YAC512-M          YAC512-M          SO16-200         _smd     1
+IC3      TL3474D           TL074D            SO14-150         _smd     1
+IC4      TL3474D           TL074D            SO14-150         _smd     1
+IC5      AD7801            AD7801            SO20-300         _smd     1
+IC6      74AHCT00D         74AHCT00D         SO14-150         _smd     1
+IC7      TL3472D           TL072D            SO8-150          _smd     1
+J1       LC256_EXPANSION_M LC256_EXPANSION_M _PINHEAD2X14_90M _smd     1
+J2       LINE IN           HEADPHONE         _PJ307           _smd     1
+J3       LINE OUT          HEADPHONE         _PJ307           _smd     1
+JP1      3.3V/5V           PAD-1-2-3         PAD-1-2-3        _smd     1
+JP2      VCC/DCDC          PAD-1-2-3         PAD-1-2-3        _smd     1
+L1       47uH              INDUCTOR_1207     1207             _smd     1
+Q1       14.31818MHz       YSO751SR          OSC7050          _smd     1
+R1       33                RESISTOR_0805     0805             _smd     1
+R2       33k               RESISTOR_0805     0805             _smd     1
+R3       10k               RESISTOR_0805     0805             _smd     1
+R4       39k               RESISTOR_0805     0805             _smd     1
+R5       68k               RESISTOR_0805     0805             _smd     1
+R6       470k              RESISTOR_0805     0805             _smd     1
+R7       7,5k              RESISTOR_0805     0805             _smd     1
+R8       2,2k              RESISTOR_0805     0805             _smd     1
+R10      10k               RESISTOR_0805     0805             _smd     1
+R11      10k               RESISTOR_0805     0805             _smd     1
+R12      390               RESISTOR_0805     0805             _smd     1
+R13      15k               RESISTOR_0805     0805             _smd     1
+R14      4,7k              RESISTOR_0805     0805             _smd     1
+R15      15k               RESISTOR_0805     0805             _smd     1
+R16      2,2k              RESISTOR_0805     0805             _smd     1
+R17      7,5k              RESISTOR_0805     0805             _smd     1
+R18      10k               RESISTOR_0805     0805             _smd     1
+R20      10k               RESISTOR_0805     0805             _smd     1
+R21      390               RESISTOR_0805     0805             _smd     1
+R22      22k               RESISTOR_0805     0805             _smd     1
+R23      22k               RESISTOR_0805     0805             _smd     1
+R24      3,3k              RESISTOR_0805     0805             _smd     1
+R25      22k               RESISTOR_0805     0805             _smd     1
+R26      22k               RESISTOR_0805     0805             _smd     1
+R27      7,5k              RESISTOR_0805     0805             _smd     1
+R28      7,5k              RESISTOR_0805     0805             _smd     1
+R29      15k               RESISTOR_0805     0805             _smd     1
+R30      10k               RESISTOR_0805     0805             _smd     1
+R32      10k               RESISTOR_0805     0805             _smd     1
+R34      10k               RESISTOR_0805     0805             _smd     1
+R35      390               RESISTOR_0805     0805             _smd     1
