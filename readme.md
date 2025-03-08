@@ -43,6 +43,10 @@ The pcb fits exactly in a C64C-case:
     The OSC2 is optional for the 63c09 or other custom clock frequencies...
     You have to select PAL or NTSC for composite/YC with the jumpers JP16-18.
     The 8MHz oscillator must a 3.3V type for the SD2IEC!
+    The BASIC is C64/PET/CBM2-compatible except peeks/pokes!
+    There are two screen modes selectable:
+    - 256x212 pixel, 40 columns, 256 colors (fixed RGB)
+    - 512x212 pixel, 80 columns, 16 colors (palette)
 
 ![LC256 pcb](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v11_pcb.jpg)
 
