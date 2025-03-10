@@ -1,0 +1,88 @@
+current memory map:
+-------------------
+allways bank0:	$0000-$03ff  RAM (kernal/basic system)
+ 		$0400-$7fff  RAM (banks 0-15)
+ 		-$7d00-$7dff programmable keys
+ 		-$7e00-$7fff Sprite colors
+                $8000-$bfff  ROM (language)
+ 		$c000-$c7ff  ROM (kernal/basic)
+ 		$c800-$cfff  ROM Character
+ 		$d000-$d7ff  kernal screen shadow ram
+ 		$d800-$dbff  kernal color shadow ram
+                $dc00-$dcff  i/o  VDP
+                $dd00-$dd7f  i/o  USB
+                $dd80-$ddff  i/o  unused
+ 		$de00-$de3f  i/o  6522 VIA1
+                $de40-$de7f  i/o  6522 VIA2
+                $de80-$debf  i/o  OPL3
+                $dec0-$deff  i/o  Audio DAC
+                $df00-$df3f  i/o  IO3
+                $df40-$df7f  i/o  IO4
+                $df80-$dfbf  i/o  IO5
+                $dfc0-$dfff  i/o  IO6
+ 		$e000-$ffff  ROM  kernal
+
+ROM / RAM addresses:
+--------------------
+	basic	= $8000		  Start of ROM (language)
+	font6x8	= $c800		  c64 font 6x8
+	scnram	= $d000		  kernal Video shadow RAM
+	clrram	= $d800		  kernal Color shadow RAM
+	kernal	= $e000		  Start of ROM (kernal)
+
+USB
+	usb	= $dd00		  FTDI USB chip
+
+OPL3 ports
+ 	OPL3Adr	= $de80		  Port#0 Reg, #1 Data, #2 Reg high
+	oplreg	= OPL3Adr
+	opldata	= OPL3Adr+1
+	oplregh	= OPL3Adr+2
+
+Audio DAC
+	dac	= $dec0	  write only
+
+6522 VIA1 - keyboard, control ports
+	via1	= $de00
+	  pra: kybd col out 0-7, joystick 2
+	  prb: kybd row in 0-7 (inputs), joystick 1
+
+6522 VIA2 - MMU, IEC, USB RXF/TXE, Restore
+	via2	= $de40
+	  ca1: restore-key in
+	  ca2: MMU ROML
+	  cb2: MMU ROMH
+	  pa0: USB #rxf
+	  pa1: USB #txe
+	  pa2:
+	  pa3: IEC atn out
+	  pa4: IEC clk out
+	  pa5: IEC data out
+	  pa6: IEC clk in
+	  pa7: IEC data in
+	  pb0: RAM0 bank bit #0 
+	  pb1: RAM0 bank bit #1 
+	  pb2: RAM0 bank bit #2 
+	  pb3: RAM0 bank bit #3
+	  pb4: RAM1 bank bit #0 
+	  pb5: RAM1 bank bit #1 
+	  pb6: RAM1 bank bit #2 
+	  pb7: RAM1 bank bit #3
+
+VIA register
+	prb	= $0	  Port reg b
+	prah	= $1	  Port reg a (with handshaking)
+	ddrb	= $2	  Direction reg b
+	ddra	= $3	  Direction reg a
+	t1lo	= $4	  Timer 1 low  byte
+	t1hi	= $5	  Timer 1 high byte
+	t1ldlo	= $6	  Timer 1 low  byte to load
+	t1ldhi	= $7	  Timer 1 high byte to load
+	t2lo	= $8	  Timer 2 low  byte
+	t2hi	= $9	  Timer 2 high byte
+	sr	= $a	  shift register
+	acr	= $b	  auxilary control register
+	pcr	= $c	  peripheral control register
+	ifr	= $d	  Interrupt flags register
+	ier	= $e	  Interrupt enable register
+	pra	= $f	  Port reg a
