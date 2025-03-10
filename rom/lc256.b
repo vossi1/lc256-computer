@@ -25,7 +25,7 @@ NORAM1 = 0	; Test option without RAM1: screen+color RAM in RAM0 range
 ; Disable scrolling with control '-' ($82), enable '+' ($02)
 ;
 ; current memory map:
-;		$0000-$03ff  RAM (kernal/basic system)
+;allways bank0:	$0000-$03ff  RAM (kernal/basic system)
 ;		$0400-$7fff  RAM (banks 0-15)
 ;		-$7d00-$7dff programmable keys
 ;		-$7e00-$7fff Sprite colors
