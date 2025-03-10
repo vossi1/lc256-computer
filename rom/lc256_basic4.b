@@ -12,7 +12,7 @@ FILL	= $ff	; Fills free memory areas
 ; ########################################### INFO ################################################
 ; modded by vossi 11/24 for LC256, IEC/Jiffy, RAM0 bank switching 0-15
 ; TI$ with 1/8 seconds as last digit
-; Workaround for THEN + ELSE:
+; Workaround for THEN + ELSE with graphics statements:
 ;   Write ':' after each THEN and ELSE !!!
 ; USB receive only with GET# - INPUT# does not work!
 ; **************************************** DISCLAIMER *********************************************
