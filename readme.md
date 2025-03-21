@@ -1,6 +1,6 @@
 # LC256 - CBM style 256 color SMD computer
 
-**Copyright (c) 2025 Vossi - v 1.1**
+**Copyright (c) 2025 Vossi - v 1.2**
 **www.mos6509.com**
 
 ## License
@@ -21,14 +21,22 @@ International License. See [https://creativecommons.org/licenses/by-sa/4.0/](htt
     - 2 internal extension-connectors
     - external cartridge connector for development cart
     - optional DAC/OPL3-soundcard
-    - optional HD63c09 CPU-adapter
-    - fits in c64-case with c64-keyboard
+    - optional HD63c09 CPU-adapter - needs special CPLD-code and DOS-ROM (under development)
+    - fits in c64/c64c-case with c64-keyboard
 
-**[Schematic](https://github.com/vossi1/lc256-computer/blob/master/schematics/lc256_v11.png)**
+**v1.2 changes:**
 
-**[Parts](https://github.com/vossi1/lc256-computer/blob/master/parts/lc256_v11_parts.txt)**
+    - Dual red/green case LED (orange = power, green = SD read, red = SD record/error)
+    - optional 64K ROM with 32K bank switching with VIA2 PA2
+    - WDC 65c22s pullup resistors (VIA1)
+    - V9938 RGB capacitor bypass (JP24-26)
+    - minor layout corrections (composite and DIN connector holes)
 
-The pcb fits exactly in a C64C-case:
+**[Schematic](https://github.com/vossi1/lc256-computer/blob/master/schematics/lc256_v12.png)**
+
+**[Parts](https://github.com/vossi1/lc256-computer/blob/master/parts/lc256_v12_parts.txt)**
+
+The pcb (initial release v1.1) fits exactly in a C64C-case:
 ![LC256 photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_case.jpg)
 
 **details:**
@@ -50,12 +58,13 @@ The pcb fits exactly in a C64C-case:
     - 256x212 pixel, 40 columns, 256 colors (fixed RGB)
     - 512x212 pixel, 80 columns, 16 colors (palette)
 
-![LC256 pcb](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v11_pcb.jpg)
+Final pcb v1.2 with HD63c09-CPU-adapter and Soundcard: 
+![LC256 pcb](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v12_6309_case.jpg)
 
 **jumpers for 65c02, CPLD, V9958, 1MB RAM, no 555, 3.3V osc's:**
 
     JW1-4 (WDC-CPU): 1-2
-    JP1-2 (V9958): close (PCB v1.1 preconnected)
+    JP1-2 (V9958): close (PCB v1.1 preconnected, v1.2 open)
     JP3 (IEC Reset/Switch1): 1-2
     JP4 (AVR-Reset): open
     JP5 (OSC Q3 3.3/5V): 1-2 for 3.3V
@@ -72,9 +81,13 @@ The pcb fits exactly in a C64C-case:
     JP16-18 (PAL/NTSC): 1-2 = PAL, 2-3 = NTSC
     JP19 (FIRQ(6309) Ext.1): open
     JP20 (FIRQ(6309) Ext.2): open
-    JP21 (521KB): 2-3
-    
-![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v11_pcb_back.jpg)
+    JP21 (512KB RAM): 2-3
+    JP22 (512KB RAM): close
+    JP23 (64K ROM): open
+    JP24-26 (V9938): open
+
+Final pcb v1.2 bottom side:    
+![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v12_pcb_back.jpg)
 
 **assembling hints:**
 

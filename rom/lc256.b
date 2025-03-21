@@ -1,5 +1,5 @@
 ; LC256 ROM
-; for ACME assembling by Vossi 09/2024, last update 10/2024
+; for ACME assembling by Vossi 09/2024, last update 3/2025
 ; v1.0 initial
 ; v1.1 added yjk mode
 !cpu 65c02
@@ -11,7 +11,7 @@ PI	= $99
 HZ = 64		; System interrupt frequency, at 4MHz clock is minimum 62 because of 16 bit timer!
 		;   if other then 64 the 1/8 seconds for TI$ are not correct!
 V10PCB = 0	; select first PCB v.1.0: only 2x2 bit RAM banks (max. 128kB chips)
-V11PCB128K = 0	; select PCB v.1.1 with 128kB RAM1 chip
+V11PCB128K = 0	; select PCB v.1.1+ with 128kB RAM1 chip
 NMI555 = 0	; enable for 555 Restore-key NMI, disable for VIA2 CA1 NMI
 JIFFY = 1	; enable Jiffy-DOS 6.01 (Works at 1, 2, 3 or 4 MHz clock)
 DISDEF	= 23	;bytes to disassemble by default
@@ -283,7 +283,7 @@ NORAM1 = 0	; Test option without RAM1: screen+color RAM in RAM0 range
 	; cb2: MMU ROMH
 	; pa0: USB #rxf
 	; pa1: USB #txe
-	; pa2:
+	; pa2: (27c512 ROM: 32K bank 0/1)
 	; pa3: IEC atn out
 	; pa4: IEC clk out
 	; pa5: IEC data out
