@@ -1,5 +1,5 @@
 ; LC256 ROM
-; for ACME assembling by Vossi 09/2024, last update 3/2025
+; for ACME assembling by Vossi 09/2024, last update 03/2025
 ; v1.0 initial
 ; v1.1 added yjk mode
 !cpu 65c02
