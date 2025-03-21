@@ -17,7 +17,7 @@ International License. See [https://creativecommons.org/licenses/by-sa/4.0/](htt
     - 128kB dedicated video RAM
     - IEC-interface
     - onboard IEC2SD-drive
-    - RGB, YC, composite output in PAL/NTSC
+    - RGB, YC, composite output in PAL/NTSC (V9938 only RGB!)
     - 2 internal extension-connectors
     - external cartridge connector for development cart
     - optional DAC/OPL3-soundcard
@@ -85,7 +85,7 @@ The pcb fits exactly in a C64C-case:
     If you want to use a V9938 you have to solder a 10k resistor and open the
     V9958 solder-bridges (check the correct V9958-bridges carefully!!!).
     You can leave the 10k resistor for the V9958.
-    With V9938 you have to bridge the 100nF caps C8,C9,C12.
+    With V9938 you have to bridge the 100nF caps C8,C9,C12. YC and composite doesn't work with V9938!
     You have to solder the YC-board on the pinheaders to get the correct height for the case!
 
 OPL3-DAC-soundcard:

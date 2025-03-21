@@ -1,0 +1,12 @@
+Shadowwolf2 Firmware LC256 SD2IEC 1.2a:
+avrdude -p m644p -c atmelice_isp -U flash:w:sd2iec_sw2_m644p.bin
+
+Ext. 8MHz Clock:
+avrdude -p m644p -c atmelice_isp -U lfuse:w:0xe0:m -U hfuse:w:0xda:m -U efuse:w:0xfd:m
+avrdude -p m644p -c avrispmkii -U lfuse:w:0xe0:m -U hfuse:w:0xda:m -U efuse:w:0xfd:m
+
+Int.Clock:
+avrdude -p m644p -c avrispmkii -U lfuse:w:0xc2:m -U hfuse:w:0xda:m -U efuse:w:0xfd:m
+
+Original SW2:
+avrdude -p m644p -c avrispmkii -U lfuse:w:0xe7:m -U hfuse:w:0xda:m -U efuse:w:0xfd:m
