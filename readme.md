@@ -43,7 +43,7 @@ The pcb (initial release v1.1) fits exactly in a C64C-case:
 
     The LC256 runs with 4MHz PLCC CMD/Rockwell 65c02 and CMD/Rockwell 65c22 or WDC 65c22.
     For a WDC65C02S CPU you have to change the solderpards JW1-4 and assemble the R62.
-    To use a WDC65c22s you need the two resistor-packs-patch on the back side (photo)
+    To use WDC65c22s with v1.1 you need the two resistor-packs-patch on the back side (photo)
     You should use a EPM7064SLC44 CPLD (7032 possible with adapted code). With limited
     DMA-features it's possible to use a GAL 26CV12 instead (solderpad change needed!).
     The NE555 circuit is not needed if you use the VIA-restore (like in the VIC20).
