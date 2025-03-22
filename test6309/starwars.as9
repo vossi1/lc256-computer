@@ -1,0 +1,298 @@
+; ***** LC256 HD63C09 Starwars Demo *****
+; (c) 11/2024 Vossi, Baleares
+; assemble with BS9: https://github.com/Edilbert/BS9
+cpu = 6309
+store $8000,$8000,"starwars.bin"
+; * switches
+CLOCK = 4		; CPU clock in MHz for VDP waits (5MHz maximum!!!)
+PAL = 1			; PAL=1 / NTSC=0 selects V9938/58 PAL RGB-output, NTSC has a higher picture
+; VDP speed parameter - don't change!
+; Waitsub limit is 8us!, clock max. is 5MHz!
+WAIT12 = 1		; us 1. - 2. byte VDP
+WAIT23 = 2		; us 2. - 3. byte VDP, code with more than 10c has no VDPWait!
+WAITVRAM1 = 3		; us vram 1.access
+WAITVRAM = 6		; us vram loop 
+WAITREAD = 8		; us vram read 
+; ***************************************** CONSTANTS *********************************************
+; CPU Flags
+CARRYFLAG	= $01
+OVERFLOWFLAG	= $02
+ZEROFLAG	= $04
+NEGATIVEFLAG	= $08
+IRQFLAG		= $10
+HALFCARRYFLAG	= $20
+FIRQFLAG	= $40
+ENTIREFLAG	= $80
+NOP_OPCODE	= $12
+; VDP defines
+VDPREG1		= $00		; VDP reg 1 value (mode bits M1+M2, screen disabled)
+VDPREG9         = $80 | PAL*2   ; VDP reg 9 value ($80 = NTSC, $82 = PAL / 212 lines)
+VDPREG18        = $0d           ; VDP reg 18 value (V/H screen adjust, $0d = Sony PVM 9")
+; ########################################### INFO ################################################
+;
+; **************************************** DIRECTPAGE *********************************************
+*=$0000
+BIOS_DP		=*>>8		; BIOS Direct Page
+; vars
+counter		*=*+1
+counter2	*=*+1
+; ***************************************** ABSOLUTE **********************************************
+; System stack area
+MACHINESTACK	= $01ff
+USERSTACK	= $02ff
+; System absolute
+buffer		= $0400
+; *************************************** IO / EQUATES ********************************************
+; 
+; **************************************** ADDRESSES **********************************************
+; I/O addresses
+VDPWriteAdr	= $dc00			; Port#0 RamWrite, #1 Control, #2 Palette, #3 Indirect
+VDPReadAdr	= $dc80			; Port#0 RamRead, #1 Status
+; VDP ports
+VDPRamWrite	= VDPWriteAdr
+VDPControl	= VDPWriteAdr+1
+VDPPalette	= VDPWriteAdr+2
+VDPIndirect	= VDPWriteAdr+3
+VDPRamRead	= VDPReadAdr
+VDPStatus	= VDPReadAdr+1
+; ******************************************* MACROS **********************************************
+; macros
+ADDD8 macro _val8		; *** adds 8bit value/memory to .d
+	addb _val8			; add to lo
+	adca #0				; add carry to hi
+	endm
+; VDP macros
+VdpWait macro _us, _cx		; *** us wait - extra cycles present except st_ (3c) - for VDP access
+	_c=_us*CLOCK-_cx-3		; 21c maximum wait cycles @ 4MHz (0 extra cycles)
+	if _c>=11			; 11c minimum for sub
+	  jsr Wait11c-_c+11		; -> wait 11-21c
+	  _c=0
+	endif
+	if _c==10
+	  exg 0,0			; exchange 0 registers = 5c, does not affect flags
+	  _c=_c-5
+	endif
+	if _c>=5
+	  exg 0,0			; exchange 0 registers = 5c, does not affect flags
+	  _c=_c-5
+	endif
+	if _c>0
+	  fill _c (NOP_OPCODE)		; each nop needs 1/4 us @ 4MHz 6309/native mode
+	endif
+	endm
+
+VdpSetReg macro _reg		; *** set VDP Register arg to .a
+	sta VDPControl			; first writes data in .a to control port #1
+	if CLOCK>4
+	nop
+	endif
+	lda #_reg | $80			; writes register no. with bit#7 = 1 to Port #1
+	sta VDPControl
+	endm
+
+VdpWriteAddress macro		; *** set VDP write vram address-pointer to .d
+	stb VDPControl			; write address lo
+	if CLOCK>4
+	nop
+	endif
+	ora #$40			; bit#6 = 1 write
+	sta VDPControl			; write address hi
+	endm
+
+VdpReadAddress macro		; *** set VDP read vram address-pointer to .d
+	stb VDPControl			; read address lo
+	nop
+	nop
+	if CLOCK>4
+	nop
+	endif
+	sta VDPControl			; read address hi
+	endm
+; ******************************************* MAIN ************************************************
+org $8000
+BitmapData:
+load BitmapData,"starwars.rgb"
+; cold start
+org $e000
+start:	orcc #IRQFLAG|FIRQFLAG		; disable interrupts
+	setdp BIOS_DP
+	lda #BIOS_DP
+	tfr a,dp			; Set direct page register
+	lds #MACHINESTACK
+	ldu #USERSTACK
+	ldmd #$01			; Switch to 6309 native mode, FIRQ-handling as on the 6809
+; init
+	jsr VDPInit
+	jsr VDPOn
+; display pictures
+	clrd
+	VdpWriteAddress			; set VRAM write address to .d = $0000, Bank Reg already $00
+	lda #2
+	sta counter2			; copy 2x pictures
+	lda BitmapData+1
+	sta counter			; set line counter to y-resolution of bitmap
+	ldx #BitmapData+2		; set .x to bitmap data
+	tfr x,d				; safe data pointer in .d
+
+linelp:	lde BitmapData			; x resolution
+; left
+leftxlp:ldf ,x+				; read data
+	stf VDPRamWrite
+	VdpWait WAITVRAM,12
+	dece				; dec x
+	bne leftxlp			; finished? no -> next pixel
+
+	tfr d,x				; restore data pointer
+	lde BitmapData			; x resolution
+; right
+rigtxlp:ldf ,x+				; read data
+	stf VDPRamWrite
+	VdpWait WAITVRAM,12
+	dece				; dec x
+	bne rigtxlp			; finished? no -> next pixel
+	
+; next line	
+	dec counter
+	beq lowpics			; last Bitmap line reached
+	ADDD8 BitmapData		; add x resolution
+	tfr d,x
+	bra linelp			; next line
+; lower half
+lowpics:ldx #BitmapData+2		; set .x to bitmap data
+	tfr x,d				; safe data pointer in .w
+	dec counter2			; 2 times
+	bne linelp	
+
+; read/write test loop
+test:	clrd				; vram start
+	sta counter			; reset line counter
+	
+testlp:	tfr d,w				; remember vram address
+
+	lda counter
+	anda #$c0			; isolate bit 6+7 (16k bank)
+	asla				; address bits 14+15 -> bit 0+1
+	rola
+	rola
+	VdpSetReg 14			; set VRAM bank reg
+	VdpWait WAIT23,6
+	tfr w,d				; get VRAM address
+	anda #$3f			; remove VRAM address bit 14+15
+	VdpReadAddress			; set VRAM read address
+
+	clrb
+	ldx #buffer			; set .x to buffer
+readlp:	VdpWait WAITREAD,13
+	lda VDPRamRead			; read byte
+	sta ,x+				; store to buffer
+	decb				; dec x counter
+	bne readlp
+
+	lda counter
+	anda #$c0			; isolate bit 6+7 (16k bank)
+	asla				; address bits 14+15 -> bit 0+1
+	rola
+	rola
+	VdpSetReg 14			; set VRAM bank reg
+	VdpWait WAIT23,6
+	tfr w,d				; restore vram line start address
+	anda #$3f			; remove VRAM address bit 14+15
+	VdpWriteAddress
+
+	clrb
+	ldx #buffer+256			; set .x to buffer end
+writelp:VdpWait WAITVRAM,13
+	lda ,-x				; read byte
+	sta VDPRamWrite			; store to buffer
+	decb				; dec x counter
+	bne writelp
+
+	tfr w,d				; restore vram line start
+	addd #256			; next line in vram
+	inc counter			; inc line counter
+	lde counter
+	cmpe #212			; last line?
+	bne testlp			; ..no -> next line
+
+	pshu a
+	lda #6
+	clrw
+pause:	decw
+	bne pause
+	deca
+	bne pause
+	pulu a
+
+	lbra test
+; ******************************************** VDP ************************************************
+; VDP subroutines
+	fill 26 (NOP_OPCODE)		; *** wait 11-37 cycles (jsr=7c, rts=4c, each nop +1c)
+Wait11c:rts
+; -------------------------------------------------------------------------------------------------
+; init VDP
+VDPInit:clra
+	VdpSetReg 17			; write VDP regs fast indirect
+	ldx #VdpInitData
+vinilp:	lda ,x+
+	sta VDPIndirect
+	cmpx #VdpInitDataEnd
+	bne vinilp
+
+	lda #VDPREG18
+	VdpSetReg 18			; set register 18 V/H display adjust L 7-1,0,f-8 R
+
+; clear 128kB VRAM (in mode 6/7 complete autoincrement)
+	VdpWait WAIT23,2
+	clrd
+	VdpWriteAddress			; set VRAM write address to .d = $0000, Bank Reg already $00
+	clrw				; reset counter .w
+	lda #2				; 2x $10000 VRAM to clear
+	VdpWait WAITVRAM1,4
+
+viramlp:stb VDPRamWrite			; .b already 0 = VRAM init value
+	VdpWait WAITVRAM,5
+	decw
+	bne viramlp
+	deca
+	bne viramlp
+					; .a already 0
+	VdpSetReg 14			; set VRAM bank reg back to 0
+	rts
+; -------------------------------------------------------------------------------------------------
+; enable screen
+VDPOn:	lda #VDPREG1 | $40		; set mode reg 1 (M1+M2), bit#6 = 1 enables screen
+	VdpSetReg 1
+	rts
+; -------------------------------------------------------------------------------------------------
+; disable screen
+VDPOff:	lda #VDPREG1 & $bf		; set mode reg 1 (M1+M2), bit#6 = 1 enables screen
+	VdpSetReg 1
+	rts
+; ****************************************** VDP-DATA *********************************************
+; VDP tables
+VdpInitData:				; graphics7-mode
+	fcb $0e,$00,$1f,$80,$00,$f7,$1e,$00,$08,VDPREG9,$00,$01,$10,$0f,$00
+	; reg  0: $0e mode control 1: graphics mode 7 (bit#1-3 = M3 - M5)
+	; reg  1: $00 mode control 2: graphics mode 7 (bit#3-4 = M2 - M1, #6 = 1: display enable)
+	; reg  2: $1f BitmapData table base address $0000 (bit#5 * $10000, bit#0-4 = 1)
+	; reg  3: $ff color table base address $FFC0 (* $40)
+	; reg  4: $00 pattern (character) generator table base address $0000 (* $800)
+	; reg  5: $f7 sprite attribute table base address $FA00 (* $80)
+	; reg  6: $1e sprite pattern (data) generator base address = $F000 (* $800)
+	; reg  7: $00 8bit backdrop color 
+	; reg  8: $08 refresh bit#3 = 1: 64k VRAM chips
+	; reg  9: $80 bit#1 = NTSC/PAL, #2 = EVEN/ODD, #3 = interlace, #7 = 192/212 lines
+	; reg 10: $03 color table base address $F800 bit#0-2 = A14-A16
+	; reg 11: $01 sprite attribute table base address $FA00 bit#0-1 = A15-A16
+	; reg 12: $10 text/background blink color
+	; reg 13: $0f blink periods ON/OFF - 0f = blinking off
+	; reg 14: $00 VRAM write addresss bit#0-2 = A14-A16
+VdpInitDataEnd:
+	fcb 0                   ; only to get last label !
+; ******************************************** DATA ***********************************************
+; data, tables
+; ****************************************** VECTORS **********************************************
+; Hardware vectors
+org $fffe
+	fdb start
+end

@@ -1,0 +1,2 @@
+#!/bin/sh
+bs9 -l 0xff starwars.as9
