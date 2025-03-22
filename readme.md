@@ -10,7 +10,6 @@ International License. See [https://creativecommons.org/licenses/by-sa/4.0/](htt
 ![LC256 start screen](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_title.jpg)
 
 Lena - YJK-mode with 19k colors, 63c09 starwars-test-ROM 
-
 ![LC256 Lena](https://github.com/vossi1/lc256-computer/blob/master/pictures/yjk_lena.jpg) ![LC256 6309](https://github.com/vossi1/lc256-computer/blob/master/pictures/starwars6309.jpg)
 
 **description:**
