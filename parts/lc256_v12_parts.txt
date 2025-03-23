@@ -97,14 +97,14 @@ FB3      FERRITE              FERRITE_1206            MINIMELF_1206       _smd  
 IC1      65C02J4/W65C02S      65C02_PLCC              PLCC44              _smd     1
 IC2      65C22J4              65C22_PLCC              PLCC44              _smd     1
 IC3      65C22J4              65C22_PLCC              PLCC44              _smd     1
-IC4      IS61C1024            HM628512_MULTI          SOJ32-300-SO-450    _smd     1
-IC5      IS61C1024            HM628512_MULTI          SOJ32-300-SO-450    _smd     1
+IC4      HM628512             HM628512_MULTI          SOJ32-300-SO-450    _smd     1
+IC5      HM628512             HM628512_MULTI          SOJ32-300-SO-450    _smd     1
 IC6      27/29C256/512        27C256/512_PLCC         PLCC32              _smd     1
 IC7      Yamaha V9958 (V9938) V9958                   _SDIP64             _smd     1
 IC8      IS41C16257           IS41C16257              SOJ40-400           _smd     1
 IC9      IS41C16257           IS41C16257              SOJ40-400           _smd     1
 IC10     EPM7032/64SLC44      ALTERA7032S_PLCC        PLCC44              _smd     1
-IC11     GAL26CV12            GAL26CV12               PLCC28              _smd     1
+IC11     (GAL26CV12)          GAL26CV12               PLCC28              _smd     1
 IC12     ATMEGA644P-20AU      ATMEGA644_LC256_TQFP    TQFP44              _smd     1
 IC13     FT245RL              FT245RL                 SOP28-200           _smd     1
 IC14     TL7705               TL7705_SO               SO8-150             _smd     1
