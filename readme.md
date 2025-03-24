@@ -38,7 +38,7 @@ Lena - YJK-mode with 19k colors, 63c09 starwars-test-ROM:
 
 **[Schematic](https://github.com/vossi1/lc256-computer/blob/master/schematics/lc256_v12.png)**
 
-**[Parts](https://github.com/vossi1/lc256-computer/blob/master/parts/lc256_v12_parts.txt)**
+**[Parts](https://github.com/vossi1/lc256-computer/blob/master/parts/lc256_v12_bom_all.xlsx)**
 
 The pcb (initial release v1.1) fits exactly in a C64C-case:
 ![LC256 photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_case.jpg)
@@ -78,7 +78,7 @@ Final pcb v1.2 with HD63c09-CPU-adapter and Soundcard:
     JP9 (555-NMI): open
     JP10 (CS2/BS-TSC): 1-2
     JP11 (CS1/BA-AVMA): 1-2
-    JP12 (BA):
+    JP12 (BA): 1-2
     JP13 (Restore CA1/555): 1-2
     JP14 (CPU-Clock): 1/2 (4MHz)
     JP15 (OSC 1/2): 1-2 (OSC1)
