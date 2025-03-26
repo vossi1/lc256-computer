@@ -33,7 +33,7 @@ Lena - YJK-mode with 19k colors, 63c09 starwars-test-ROM:
     - Dual red/green case LED (orange = power, green = SD read, red = SD record/error)
     - optional 64K ROM with 32K bank switching with VIA2 PA2
     - WDC 65c22s pullup resistors (VIA1)
-    - V9938 RGB capacitor bypass (JP24-26)
+    - V9938 RGB capacitor bypass (JP24-26) (not needed with new V9938-patch!)
     - minor layout corrections (composite and DIN connector holes)
 
 **[Schematic](https://github.com/vossi1/lc256-computer/blob/master/schematics/lc256_v12.png)**
@@ -88,7 +88,7 @@ Final pcb v1.2 with HD63c09-CPU-adapter and Soundcard:
     JP21 (512KB RAM): 2-3
     JP22 (512KB RAM): close
     JP23 (64K ROM): open
-    JP24-26: open (not neededwith new V9938-patch!)
+    JP24-26: open (not needed with new V9938-patch!)
 
 Final pcb v1.2 bottom side:    
 ![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v12_pcb_back.jpg)
