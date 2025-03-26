@@ -112,6 +112,8 @@ Final pcb v1.2 bottom side:
     Leave JP24-26 open! Leave these patch in the circuit even with the V9958 - that's ok.
     But check carefully that the V9958 solderpads are open with the V9938 !!!
 
+    The cap C22 is wrong! Leave it away or solder a 5pF cap instead.
+
 ![LC256 V9938-Patch](https://github.com/vossi1/lc256-computer/blob/master/pictures/v9938-patch.jpg)
 
 OPL3-DAC-soundcard:
