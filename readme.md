@@ -21,7 +21,7 @@ Lena - YJK-mode with 19k colors, 63c09 starwars-test-ROM:
     - 128kB dedicated video RAM
     - IEC-interface
     - onboard IEC2SD-drive
-    - RGB, YC, composite output in PAL/NTSC (V9938 only RGB!)
+    - RGB, YC, composite output in PAL/NTSC
     - 2 internal extension-connectors
     - external cartridge connector for development cart
     - optional DAC/OPL3-soundcard
@@ -88,7 +88,7 @@ Final pcb v1.2 with HD63c09-CPU-adapter and Soundcard:
     JP21 (512KB RAM): 2-3
     JP22 (512KB RAM): close
     JP23 (64K ROM): open
-    JP24-26 (V9938): open
+    JP24-26: open (not neededwith new V9938-patch!)
 
 Final pcb v1.2 bottom side:    
 ![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v12_pcb_back.jpg)
@@ -102,8 +102,17 @@ Final pcb v1.2 bottom side:
     If you want to use a V9938 you have to solder a 10k resistor and open the
     V9958 solder-bridges (check the correct V9958-bridges carefully!!!).
     You can leave the 10k resistor for the V9958.
-    With V9938 you have to bridge the 100nF caps C8,C9,C12. YC and composite doesn't work with V9938!
     You have to solder the YC-board on the pinheaders to get the correct height for the case!
+
+**V9938-PATCH:**
+
+    To get video-signals with the V9938 you need these tiny patch:
+    Solder a 1uF mlcc cap instead R3. Solder a 100k resistor at the right side of these cap.
+    connect the right free side of the new resistor with pin1 (GND) from the CXA2075.
+    Leave JP24-26 open! Leave these patch in the circuit even with the V9958 - that's ok.
+    But check carefully that the V9958 solderpads are open with the V9938 !!!
+
+![LC256 V9938-Patch](https://github.com/vossi1/lc256-computer/blob/master/pictures/v9938-patch.jpg)
 
 OPL3-DAC-soundcard:
 ![OPL3-DAC photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256-opl3-dac_soundcard_v10.jpg)
