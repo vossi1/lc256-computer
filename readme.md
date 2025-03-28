@@ -123,7 +123,7 @@ Final pcb v1.2 bottom side:
     If you want to change the verilog code you need to install the full 13.0 SP1 web software.
     You find the Programmer in the Tools menu.
 
-![LC256 Quartus Programmer](https://github.com/vossi1/lc256-computer/blob/master/pictures/programmer.png)
+![LC256 Quartus Programmer](https://github.com/vossi1/lc256-computer/blob/master/pictures/quartus-programmer.png)
 
 **V9938-PATCH:**
 
