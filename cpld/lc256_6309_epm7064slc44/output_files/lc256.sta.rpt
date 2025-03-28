@@ -1,0 +1,475 @@
+TimeQuest Timing Analyzer report for lc256
+Thu Nov 21 17:48:13 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; lc256                                                             ;
+; Device Family      ; MAX7000S                                                          ;
+; Device Name        ; EPM7064SLC44-10                                                   ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
+
+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
+
+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
+-------------------------------
+; Minimum Pulse Width Summary ;
+-------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; A[7]       ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; A[7]       ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[7]       ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[7]       ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[7]       ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[7]       ; _RDUSB      ;        ; 10.000 ; 10.000 ;        ;
+; A[8]       ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[8]       ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[8]       ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[8]       ; _CSR        ;        ; 10.000 ; 10.000 ;        ;
+; A[8]       ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[8]       ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[9]       ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CS1        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CS2        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CSR        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _RDUSB      ;        ; 10.000 ; 10.000 ;        ;
+; A[10]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; A[10]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[10]      ; _RAM1       ;        ; 15.000 ; 15.000 ;        ;
+; A[10]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _ROM        ;        ; 10.000 ; 10.000 ;        ;
+; A[11]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; A[11]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[11]      ; _RAM1       ;        ; 15.000 ; 15.000 ;        ;
+; A[11]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _ROM        ;        ; 10.000 ; 10.000 ;        ;
+; A[12]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; A[12]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[12]      ; _RAM1       ;        ; 15.000 ; 15.000 ;        ;
+; A[12]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _ROM        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CART       ; 10.000 ;        ;        ; 10.000 ;
+; A[13]      ; _CS1        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CS2        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CSR        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _IO         ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _RAM1       ; 15.000 ;        ;        ; 15.000 ;
+; A[13]      ; _RDUSB      ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CART       ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; A[14]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[14]      ; _RAM1       ; 10.000 ; 15.000 ; 15.000 ; 10.000 ;
+; A[14]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _ROM        ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; A[15]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CART       ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[15]      ; _RAM0       ;        ; 10.000 ; 10.000 ;        ;
+; A[15]      ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _RAM0       ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; ROMH       ; _RAM1       ;        ; 10.000 ; 10.000 ;        ;
+; ROMH       ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; ROML       ; _RAM1       ;        ; 10.000 ; 10.000 ;        ;
+; ROML       ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _CART       ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _CS1        ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _RAM1       ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; SYNC       ; BA          ; 18.000 ;        ;        ; 18.000 ;
+; SYNC       ; RDY         ;        ; 10.000 ; 10.000 ;        ;
+; SYNC       ; WRUSB       ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CART       ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CS1        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CS2        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CSR        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CSW        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _IO         ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _RAM0       ; 18.000 ;        ;        ; 18.000 ;
+; SYNC       ; _RAM1       ; 18.000 ;        ;        ; 18.000 ;
+; SYNC       ; _RDUSB      ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _ROM        ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; BA          ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; RDY         ; 10.000 ;        ;        ; 10.000 ;
+; _DMA       ; WRUSB       ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CART       ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CS1        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CS2        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CSR        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CSW        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _IO         ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _RAM0       ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; _RAM1       ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; _RDUSB      ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _ROM        ; 18.000 ;        ;        ; 18.000 ;
+; _EXTH      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; _EXTH      ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; _EXTH      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; _EXTL      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; _EXTL      ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; _EXTL      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; A[7]       ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; A[7]       ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[7]       ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[7]       ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[7]       ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[7]       ; _RDUSB      ;        ; 10.000 ; 10.000 ;        ;
+; A[8]       ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[8]       ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[8]       ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[8]       ; _CSR        ;        ; 10.000 ; 10.000 ;        ;
+; A[8]       ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[8]       ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[9]       ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CS1        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CS2        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CSR        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[9]       ; _RDUSB      ;        ; 10.000 ; 10.000 ;        ;
+; A[10]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; A[10]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[10]      ; _RAM1       ;        ; 15.000 ; 15.000 ;        ;
+; A[10]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[10]      ; _ROM        ;        ; 10.000 ; 10.000 ;        ;
+; A[11]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; A[11]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[11]      ; _RAM1       ;        ; 15.000 ; 15.000 ;        ;
+; A[11]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[11]      ; _ROM        ;        ; 10.000 ; 10.000 ;        ;
+; A[12]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; A[12]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[12]      ; _RAM1       ;        ; 15.000 ; 15.000 ;        ;
+; A[12]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[12]      ; _ROM        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CART       ; 10.000 ;        ;        ; 10.000 ;
+; A[13]      ; _CS1        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CS2        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CSR        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _IO         ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _RAM1       ; 15.000 ;        ;        ; 15.000 ;
+; A[13]      ; _RDUSB      ;        ; 10.000 ; 10.000 ;        ;
+; A[13]      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CART       ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; A[14]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[14]      ; _RAM1       ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; A[14]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[14]      ; _ROM        ; 10.000 ; 10.000 ; 10.000 ; 10.000 ;
+; A[15]      ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CART       ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _IO         ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _KB0        ;        ; 10.000 ; 10.000 ;        ;
+; A[15]      ; _RAM0       ;        ; 10.000 ; 10.000 ;        ;
+; A[15]      ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; A[15]      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; WRUSB       ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CS1        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _CSW        ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _RAM0       ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; PHI2       ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; ROMH       ; _RAM1       ;        ; 10.000 ; 10.000 ;        ;
+; ROMH       ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; ROML       ; _RAM1       ;        ; 10.000 ; 10.000 ;        ;
+; ROML       ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; WRUSB       ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _CART       ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _CS1        ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _CS2        ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _CSR        ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _CSW        ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _RAM1       ;        ; 10.000 ; 10.000 ;        ;
+; R_W        ; _RDUSB      ; 10.000 ;        ;        ; 10.000 ;
+; R_W        ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; SYNC       ; BA          ; 18.000 ;        ;        ; 18.000 ;
+; SYNC       ; RDY         ;        ; 10.000 ; 10.000 ;        ;
+; SYNC       ; WRUSB       ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CART       ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CS1        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CS2        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CSR        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _CSW        ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _IO         ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _RAM0       ; 18.000 ;        ;        ; 18.000 ;
+; SYNC       ; _RAM1       ; 18.000 ;        ;        ; 18.000 ;
+; SYNC       ; _RDUSB      ;        ; 18.000 ; 18.000 ;        ;
+; SYNC       ; _ROM        ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; BA          ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; RDY         ; 10.000 ;        ;        ; 10.000 ;
+; _DMA       ; WRUSB       ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CART       ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CS1        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CS2        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CSR        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _CSW        ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _IO         ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _RAM0       ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; _RAM1       ;        ; 18.000 ; 18.000 ;        ;
+; _DMA       ; _RDUSB      ; 18.000 ;        ;        ; 18.000 ;
+; _DMA       ; _ROM        ; 18.000 ;        ;        ; 18.000 ;
+; _EXTH      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; _EXTH      ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; _EXTH      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
+; _EXTL      ; _CART       ;        ; 10.000 ; 10.000 ;        ;
+; _EXTL      ; _RAM1       ; 10.000 ;        ;        ; 10.000 ;
+; _EXTL      ; _ROM        ; 10.000 ;        ;        ; 10.000 ;
++------------+-------------+--------+--------+--------+--------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 138   ; 138  ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 138   ; 138  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 21 17:48:13 2024
+Info: Command: quartus_sta lc256_6309 -c lc256
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Warning (335095): TimeQuest Timing Analyzer does not support the analysis of latches as synchronous elements for the currently selected device family.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lc256.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "be~10|[0]"
+    Warning (332126): Node "be~10|dataout"
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 361 megabytes
+    Info: Processing ended: Thu Nov 21 17:48:13 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

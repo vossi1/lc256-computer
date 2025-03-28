@@ -1,0 +1,72 @@
+Restore Archived Project report for lc256
+Thu Nov 21 17:39:30 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Thu Nov 21 17:39:30 2024 ;
+; Revision Name                   ; lc256                                 ;
+; Top-level Entity Name           ; lc256                                 ;
+; Family                          ; MAX7000S                              ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'V:/Quartus/lc256_epm7064slc44/lc256_tmp_archive.qar' into the 'V:/Quartus/lc256_6309_epm7064slc44/' directory
+Info: Generated report 'lc256.restore.rpt'
+
+
++--------------------------------------------------+
+; Files Restored                                   ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; incremental_db/compiled_partitions/lc256.db_info ;
+; lc256.qpf                                        ;
+; lc256.qsf                                        ;
+; lc256.v                                          ;
+; assignment_defaults.qdf                          ;
++--------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

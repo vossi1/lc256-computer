@@ -95,14 +95,33 @@ Final pcb v1.2 bottom side:
 
 **assembling hints:**
 
-    The holes for the 3,5mm composite/audio-connector are too small - you have to cut the
-    pins a bit to fit. The ground-pins of the DIN-connectors doesn't fit perfectly.
     I soldered all the PLCC and SOJ sockets with solder paste and hot air.
     After soldering I checked if all pins are really fixed and no bridge exists!
     If you want to use a V9938 you have to solder a 10k resistor and open the
     V9958 solder-bridges (check the correct V9958-bridges carefully!!!).
     You can leave the 10k resistor for the V9958.
-    You have to solder the YC-board on the pinheaders to get the correct height for the case!
+
+    You have to solder the YC-board on the pinheaders to get the correct height for the case:
+    Solder both jacks some degrees diagonal and the yc/usb-board also diagonal on the header so
+    the jacks are correct in place.
+
+    only v1.1: The holes for the 3,5mm composite/audio-connector are too small - you have to cut
+    the pins a bit to fit. The ground-pins of the DIN-connectors doesn't fit perfectly.
+
+**Altera CPLD:**
+
+    To program the CPLD you need an USB-Blaster (clone) and the Altera Quartus II 13.0 SP1 Software.
+    The web edition is free to download at Intel's website. Newer versions doesn't support the CPLD.
+
+    You need the "Intel® Quartus® II Programmer and SignalTap II" at TAB "additional software"
+    Install it on Windows 7 or 10. Connect your USB-blaster and install manual the driver from
+    the Driver folder in the Quartus folder on your drive.
+    Select the USB-Blaster hardware and open the LC256.POF in output_files. Click START.
+    There is also a LC256_EPM7032 file for use with the smaller EPM7032SLC44 CPLD.
+    For the HD6309 CPU use the file from the special 6309 cpld folder.
+
+    If you want to change the verilog code you need to install the full 13.0 SP1 web software.
+    You find the Programmer in the Tools menu.
 
 **V9938-PATCH:**
 
