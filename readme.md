@@ -119,6 +119,7 @@ Final pcb v1.2 bottom side:
     Select the USB-Blaster hardware and open the LC256.POF in output_files. Click START.
     There is also a LC256_EPM7032 file for use with the smaller EPM7032SLC44 CPLD.
     For the HD6309 CPU use the file from the special 6309 cpld folder.
+    You need a small external PLCC44 programming socket-board with 5V supply.
 
     If you want to change the verilog code you need to install the full 13.0 SP1 web software.
     You find the Programmer in the Tools menu.
