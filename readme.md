@@ -110,8 +110,8 @@ Final pcb v1.2 bottom side:
 
 **Altera CPLD:**
 
-    To program the CPLD you need an USB-Blaster (clone) and the Altera Quartus II 13.0 SP1 Software.
-    The web edition is free to download at Intel's website. Newer versions doesn't support the CPLD.
+    To program the CPLD you need an USB-Blaster (clone) and Altera Quartus II 13.0 SP1 Software.
+    The web edition is free at Intel's website. Newer versions doesn't support this CPLD.
 
     You need the "Intel® Quartus® II Programmer and SignalTap II" at TAB "additional software"
     Install it on Windows 7 or 10. Connect your USB-blaster and install manual the driver from
@@ -122,6 +122,8 @@ Final pcb v1.2 bottom side:
 
     If you want to change the verilog code you need to install the full 13.0 SP1 web software.
     You find the Programmer in the Tools menu.
+
+![LC256 Quartus Programmer](https://github.com/vossi1/lc256-computer/blob/master/pictures/programmer.png)
 
 **V9938-PATCH:**
 
