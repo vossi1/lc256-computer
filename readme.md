@@ -122,8 +122,10 @@ Final pcb v1.2 bottom side:
 
     You have to build a small external PLCC44 programming (tht)-socket-board with 5V supply.
     It's not safe to plug already used CPLDs from china in the LC256 for inboard programming!!!
+    In the doc-folder are the USB-Blaster and the CPLD pinout. Just supply the EPM70xx with 5V
+    and connect TDO, TDI, TMS, TCK, GND and +5V with the USB-Blaster.
 
-    If you want to change the verilog code you need to install the full 13.0 SP1 web software.
+    If you want to change the verilog code you have to install the full 13.0 SP1 web software.
     You find the Programmer in the Tools menu.
 
 ![LC256 Quartus Programmer](https://github.com/vossi1/lc256-computer/blob/master/pictures/quartus-programmer.png)
