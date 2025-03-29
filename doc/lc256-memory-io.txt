@@ -7,8 +7,8 @@ allways bank0:	$0000-$03ff  RAM (kernal/basic system)
                 $8000-$bfff  ROM (language)
  		$c000-$c7ff  ROM (kernal/basic)
  		$c800-$cfff  ROM Character
- 		$d000-$d7ff  kernal screen shadow ram
- 		$d800-$dbff  kernal color shadow ram
+ 		$d000-$d7ff  kernal screen shadow ram (with 6309 CPLD: ROM)
+ 		$d800-$dbff  kernal color shadow ram (with 6309 CPLD: ROM)
                 $dc00-$dcff  i/o  VDP
                 $dd00-$dd7f  i/o  USB
                 $dd80-$ddff  i/o  unused
