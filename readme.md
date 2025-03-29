@@ -108,7 +108,7 @@ Final pcb v1.2 bottom side:
     only v1.1: The holes for the 3,5mm composite/audio-connector are too small - you have to cut
     the pins a bit to fit. The ground-pins of the DIN-connectors doesn't fit perfectly.
 
-![LC256 yc-board diagonal](https://github.com/vossi1/lc256-computer/blob/master/pictures/yc-board-diagonal.jpg)
+![LC256 yc-board diagonal](https://github.com/vossi1/lc256-computer/blob/master/pictures/yc-board_diagonal.jpg)
 
 **Altera CPLD:**
 
