@@ -144,7 +144,7 @@ Final pcb v1.2 bottom side:
 
 ![LC256 V9938-Patch](https://github.com/vossi1/lc256-computer/blob/master/pictures/v9938-patch.jpg)
 
-6309-Adapter Header - 4x10pin male for 6309-pcb, 4x10pin custom angled female for LC256-pcb:
+6309-Adapter 1.27mm Header - 4x10pin male for 6309-pcb, 4x10pin custom angled female for LC256-pcb:
 ![6309-adapter-header](https://github.com/vossi1/lc256-computer/blob/master/pictures/6309_header.jpg)
 
 Looks nice in a clear C64C-case (pcb-LEDs visible):
