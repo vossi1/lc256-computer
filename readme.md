@@ -144,14 +144,14 @@ Final pcb v1.2 bottom side:
 
 ![LC256 V9938-Patch](https://github.com/vossi1/lc256-computer/blob/master/pictures/v9938-patch.jpg)
 
-OPL3-DAC-soundcard:
-![OPL3-DAC photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256-opl3-dac_soundcard_v10.jpg)
-
 6309-Adapter Header - 4x10pin male for 6309-pcb, 4x10pin custom angled female for LC256-pcb:
-![OPL3-DAC photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/6309_header.jpg)
+![6309-adapter-header](https://github.com/vossi1/lc256-computer/blob/master/pictures/6309_header.jpg)
 
 Looks nice in a clear C64C-case (pcb-LEDs visible):
 ![LC256 case2](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_case2.jpg)
+
+OPL3-DAC-soundcard:
+![OPL3-DAC photo](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256-opl3-dac_soundcard_v10.jpg)
 
 First prototype:
 ![LC256 prototype](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_first-prototype-v1.0.png)
