@@ -1,0 +1,27 @@
+65c02 DMA with CPLD (untested):
+-------------------
+Enable DMA: Pull down !DMA from cartridge
+- wait till BA gets High (instruction finished, BUS available)
+- 65c02 stops after current instruction (when sync appears)
+BA=high:
+- ROM is disabled
+- Full 64KB RAM access up to RAM-speedgrade (current bank, first 1KB always in bank0)
+
+Disable DMA: Remove !DMA=low
+- 65c02 continues with next instruction
+
+DMA with GAL (limited, untested):
+--------------------
+STOP CPU: Pull down !DMA from cartridge
+- wait at least 6 cycles (1500ns = maximum instruction length @4MHz)
+- 65c02 stops immediately at PHI2=low (even in in write cycles)
+Disable buffers: Pull down !BA from cartridge
+- ROM is disabled
+- Full 64KB RAM access up to RAM-speedgrade (current bank, first 1KB always in bank0)
+
+Enable buffers: remove !BA=low
+RUN CPU: Remove !DMA=low
+- 65c02 continues at next address with current instruction
+
+
+6309 DMA is untested and not fully implemented till now!

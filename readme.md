@@ -90,6 +90,10 @@ Final pcb v1.2 with HD63c09-CPU-adapter and Soundcard:
     JP23 (64K ROM): open
     JP24-26: open (not needed with new V9938-patch!)
 
+    The LC256 also runs with a GAL 26cv12 as an alternative to the CPLD (only limited DMA):
+    JP8 (DMA/RDY): 2-3 (GAL CPU STOP)
+    JP12 (BA): 2-3 (GAL BUFFER DISABLE)
+
 Final pcb v1.2 bottom side:    
 ![LC256 pcb back](https://github.com/vossi1/lc256-computer/blob/master/pictures/lc256_v12_pcb_back.jpg)
 
