@@ -2,6 +2,7 @@
 ; for ACME assembling by Vossi 09/2024, last update 03/2025
 ; v1.0 initial
 ; v1.1 added yjk mode
+; v1.2 added load+save ram1 bank 1-15 (save only with disabled ROM)
 !cpu 65c02
 !ct pet		; Standard text/char conversion table -> pet = petscii
 !to "kernal.bin", plain
@@ -3357,6 +3358,7 @@ PaletteDataEnd:
 ;* <s>      save                                *
 ;* <v>      verify                              *
 ;* <b>      select RAM 0 bank (0-15)            *
+;*             load+save; RAM0+1 bank           *
 ;* <@>      disk command (@$ directory)         *
 ;* <x>      warm start basic                    *
 ;* <u>      set default disk unit               *
@@ -5834,7 +5836,7 @@ tranr:  lda fa
 ;*   .y=start address high            *
 ;*   if .x=$ff & .y=$ff => fixed load *
 ;* exit:                              *
-;*   .a(bits 0-3)=RAM0 bank           *
+;*   .a(bits 0-3)=RAM bank           *
 ;*   .x=end address low               *
 ;*   .y=end address high              *
 ;*                                    *
@@ -6025,7 +6027,7 @@ ld410:	jmp spmsg
 ;* saves to iec devices 4>=n>=31 as    *
 ;* selected by variable fa.            *
 ;*                                     *
-;* .a = RAM0 bank                      *
+;* .a = RAM bank                      *
 ;* .x => zpage address of start vector *
 ;* .y => zpage address of end vector   *
 ;***************************************
@@ -6109,22 +6111,22 @@ saving:	lda msgflg
 	jsr spmsg
 	jmp outfn		; <file name>
 ; -------------------------------------------------------------------------------------------------
-; switch to new RAM0 bank
+; switch to new RAM bank
 SwitchBank:
 	lda via2+prb		; get MMU reg
-	and #%00001111		; isolate RAM0 bank
 	sta temp		; and remember
-	lda #%11110000		; clear RAM0 bank
-	and via2+prb
-	ora relsab		; set RAM0 bank
-	sta via2+prb
+	lda relsab		; get bank
+	asl			; shift to hi=bank1
+	asl
+	asl
+	asl
+	ora relsab		; add bank0
+	sta via2+prb		; set MMU
 	rts
 ; -------------------------------------------------------------------------------------------------
-; Restore RAM0 Bank
+; Restore RAM Bank
 RestoreBank:
-	lda #%11110000		; clear RAM0 bank
-	and via2+prb
-	ora temp
+	lda temp
 	sta via2+prb		; restore old RAM bank
 	rts
 ; -------------------------------------------------------------------------------------------------
