@@ -1,6 +1,6 @@
-# How to solder PLCC / SOJ - sockets with hot air #
+# How to solder PLCC / SOJ - sockets with hot air
 
-**Copyright (c) 2025 Vossi **
+**Copyright (c) 2025 Vossi**
 **www.mos6509.com**
 
 **For soldering the SMD-PLCC/SOJ sockets you need:**
@@ -9,6 +9,7 @@
     - solderpaste (I prefer with lead for non-commercial usage!)
 
 Adjust the hot air to 220 C (so as not to melt the sockets!):
+
 ![LC256 hot air 220C](https://github.com/vossi1/lc256-computer/blob/master/howto/plcc-hotair_1.jpg)
 
 
