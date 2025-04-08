@@ -3,13 +3,13 @@
 **Copyright (c) 2025 Vossi **
 **www.mos6509.com**
 
+For soldering the SMD-PLCC/SOJ sockets you need:
+    - an adjustable hot air station 
+    - solderpaste (I prefer with lead for non-commercial usage!)
+
+Adjust the hot air to 220 C (as notz to melt the sockets!)
 ![LC256 start screen](https://github.com/vossi1/lc256-computer/blob/master/howto/plcc-hotair_1.jpg)
 
-
-**description:**
-
-    A 4MHz 65c02 computer with the Yamaha V9958 (V9938)
-    - 1MB RAM (256/512KB possible)
 
 ![LC256 start screen](https://github.com/vossi1/lc256-computer/blob/master/howto/plcc-hotair_2.jpg)
 
