@@ -110,9 +110,9 @@ IC14     TL7705               TL7705_SO               SO8                 _smd  
 IC15     NE555                NE555                   SO8                 _smd     1
 IC16     74AHCT138D           74AHCT138D              SO16                _smd     1
 IC17     74HCT393D            74HCT393D               SO14                _smd     1
-IC18     74AHCT245D           74AHCT245D              SO20                _smd     1
-IC19     74AHCT245D           74AHCT245D              SO20                _smd     1
-IC20     74AHCT245D           74AHCT245D              SO20                _smd     1
+IC18     74AHCT245NS          74AHCT245D              SO20                _smd     1
+IC19     74AHCT245NS          74AHCT245D              SO20                _smd     1
+IC20     74AHCT245NS          74AHCT245D              SO20                _smd     1
 IC21     74AHCT125D           74AHCT125D              SO14                _smd     1
 IC22     74LS06D              74LS06D                 SO14                _smd     1
 IC23     74AHCT08D            74AHCT08D               SO14                _smd     1

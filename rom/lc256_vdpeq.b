@@ -2,7 +2,7 @@
 CLOCK = 4		; CPU clock in MHz for VDP waits
 ; vdp
 MODE = 7		; 6 = graphics 6: 512px/16colors / 7 = graphics 7: 256px/256colors
-PAL = 0			; PAL=1 / NTSC=0 selects V9938/58 PAL RGB-output, NTSC has a higher picture
+PAL = 1			; PAL=1 / NTSC=0 selects V9938/58 PAL RGB-output, NTSC has a higher picture
 LINES = 212		; lines = 192 / 212
 ; VDP speed parameter - don't change!
 WAIT12 = 1 ; 2		; us 1. - 2. byte VDP
